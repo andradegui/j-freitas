@@ -8,12 +8,16 @@ body {
   font-family: "Poppins";
 }
 
+html {
+    overflow-x: hidden !important;
+}
+
 .header {
   background-color: #f8f9fb;
   border-bottom: 1px solid #e5e5e5;
   padding: 12px 0;
   position: relative;
-  z-index: 1000;
+  z-index: 1000;  
 }
 
 .container {
@@ -30,8 +34,8 @@ body {
   height: 8vh;
 }
 
-.logo h1{
-    display: none;
+.logo h1 {
+  display: none;
 }
 
 /* Menu Desktop */
@@ -41,8 +45,9 @@ body {
   gap: 35px;
 }
 
-.nav a, 
-.desktop-only .lang-dropdown li a{
+.nav a,
+.desktop-only .lang-dropdown li a {
+  font-size: 1em;
   text-decoration: none;
   color: #2c3e50;
   font-weight: 500;
@@ -56,7 +61,7 @@ body {
 /* Idioma */
 .language {
   position: relative;
-  font-size: 14px;
+  font-size: 1em;
   cursor: pointer;
 }
 
@@ -133,7 +138,22 @@ body {
   top: 10px;
 }
 
-/* Mobile */
+.hero{
+     background-image: url("assets/hero.jpg");
+    background-position: 50% 0%;
+    background-size: cover;
+    /*view height*/
+    height: 100vh;
+    /*posiciona vertical*/
+    align-items: center;
+    /*posiciona horizontal*/
+    justify-content: space-between;
+    padding: 0 7vw 7vw 7vw;
+    /* Se torna referência para as divs filhas */
+    position: relative;
+}
+
+/* Tablet */
 @media (max-width: 1000px) {
   .nav {
     position: absolute;
