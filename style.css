@@ -9,7 +9,7 @@ body {
 }
 
 html {
-    overflow-x: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .header {
@@ -17,7 +17,7 @@ html {
   border-bottom: 1px solid #e5e5e5;
   padding: 12px 0;
   position: relative;
-  z-index: 1000;  
+  z-index: 1000;
 }
 
 .container {
@@ -138,19 +138,29 @@ html {
   top: 10px;
 }
 
+button {
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
 .hero{
-     background-image: url("assets/hero.jpg");
-    background-position: 50% 0%;
-    background-size: cover;
-    /*view height*/
-    height: 100vh;
-    /*posiciona vertical*/
-    align-items: center;
-    /*posiciona horizontal*/
-    justify-content: space-between;
-    padding: 0 7vw 7vw 7vw;
-    /* Se torna referência para as divs filhas */
-    position: relative;
+  color: rgb(255, 255, 255, 0.9);
+}
+
+.hero {
+  background-image: url("assets/hero.webp");
+  background-position: 50% 0%;
+  background-size: cover;
+  /*view height*/
+  height: 100vh;
+  /*posiciona vertical*/
+  align-items: center;
+  /*posiciona horizontal*/
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  /* Se torna referência para as divs filhas */
+  position: relative;
+  opacity: 1;
 }
 
 /* Tablet */
