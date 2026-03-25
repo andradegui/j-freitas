@@ -13,7 +13,7 @@ html {
 }
 
 .header {
-  background-color: #f8f9fb;
+  background-color: #FFFFFF;
   border-bottom: 1px solid #e5e5e5;
   padding: 12px 0;
   position: relative;
@@ -117,9 +117,11 @@ html {
 .hamburger span:nth-child(1) {
   top: 0;
 }
+
 .hamburger span:nth-child(2) {
   top: 10px;
 }
+
 .hamburger span:nth-child(3) {
   top: 20px;
 }
@@ -139,29 +141,171 @@ html {
 }
 
 button {
-    font-family: "Poppins", sans-serif;
-    cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 
-.hero{
-  color: rgb(255, 255, 255, 0.9);
+section {}
+
+.bold {
+  font-weight: 700;
 }
+
 
 .hero {
-  background-image: url("assets/hero.webp");
-  background-position: 50% 0%;
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+  background-image: url("assets/hero-2.webp");
+  background-position: 50% 50%;
   background-size: cover;
-  /*view height*/
-  height: 100vh;
-  /*posiciona vertical*/
+  height: 120vh;
+  flex-flow: row wrap;
   align-items: center;
   /*posiciona horizontal*/
   justify-content: space-between;
-  padding: 0 7vw 7vw 7vw;
+  padding: 2vw 6vw 6vw 6vw;
   /* Se torna referência para as divs filhas */
   position: relative;
-  opacity: 1;
+
+  h2,
+  p,
+  span {
+    color: #F4F4F4;
+  }
+
+
+  .meio {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      font-size: 3vw;
+      text-align: center;
+    }
+  }
+
+  .textos-hero {
+    /* background-color: olivedrab; */
+    display: flex;
+    justify-content: space-between;
+
+    .esquerda,
+    .direita {
+      display: flex;
+    }
+
+    .esquerda {
+      /* background-color: red; */
+      width: 26%;
+
+      p {
+        font-size: 2vw;
+        font-weight: 300;
+      }
+    }
+
+    .direita {
+      /* background-color: purple; */
+      width: 27%;
+
+      p {
+        font-size: 2vw;
+        font-weight: 300;
+        text-align: end;
+      }
+    }
+
+  }
+
+  .contato {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vw;
+
+    .botoes {
+
+      .whatsapp,
+      .email {
+        border: none;
+        outline: none;
+        color: #F4F4F4;
+        font-size: 1.2vw;
+        width: 13vw;
+        height: 6vh;
+
+        border-radius: 2px;
+      }
+
+      .whatsapp {
+        background-color: #25D366;
+      }
+
+      .whatsapp:hover {
+        background-color: rgba(31, 185, 87, 0.77);
+      }
+
+      .email {
+        background-color: #162B4D;
+      }
+
+      .email:hover {
+        background-color: #274980;
+      }
+
+    }
+
+  }
+
 }
+
+.sobre-nos {
+  display: flex;
+  flex-flow: row wrap;
+
+  .capo-fusca,
+  .texto-sobre-nos {
+    width: 50%;
+  }
+
+  .capo-fusca {
+    background-image: url("assets/capo-fusca.png");
+    background-size: cover;
+    /* width: 100vw; */
+    height: 100vh;
+  }
+
+  .texto-sobre-nos {
+    background-color: #162B4D;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 4vw;
+
+    h3,
+    p {
+      color: #F4F4F4;
+    }
+
+    h3 {
+      font-size: 3vw;
+      letter-spacing: 3px;
+    }
+
+    p {
+      font-size: 1.4vw;
+      font-weight: 300;
+    }
+  }
+}
+
+
 
 /* Tablet */
 @media (max-width: 1000px) {
@@ -258,4 +402,39 @@ button {
     width: 100%;
     text-align: center;
   }
+
+  .hero {
+
+    flex-direction: column;
+    /* padding: 26% 4vw 0; */
+
+    .meio {
+      h2 {
+        font-size: 7vw;
+      }
+    }
+
+    .textos-hero {
+
+      .esquerda,
+      .direita {
+        width: 100%;
+      }
+
+      .esquerda {
+        p {
+          font-size: 5.5vw;
+        }
+
+      }
+
+      .direita {
+        p {
+          font-size: 5.5vw;
+        }
+      }
+    }
+
+  }
+
 }
