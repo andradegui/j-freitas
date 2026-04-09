@@ -314,7 +314,6 @@ section {}
     width: 50%;
   }
 
-
   .texto-mvv {
     background-color: #B0B3B8;
     height: 100vh;
@@ -351,7 +350,7 @@ section {}
 
 .diferenciais {
   padding: 2vw 6vw 6vw 6vw;
-  /* height: 100vh; */
+  height: 100vh;
   background-color: #9E1B1B;
 
   h3 {
@@ -378,6 +377,47 @@ section {}
       padding: 20px;
     }
   }
+}
+
+.atuacao-mercado {
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 7vw;
+  background-image: url("assets/containers.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100vh;
+
+  h3,
+  p {
+    color: #F4F4F4;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 3vw;
+    letter-spacing: 3px;
+  }
+
+  .texto-atuacao-mercado {
+    
+    /* display: flex; */
+    p {
+      width: 80%;
+      max-width: 900px;
+      margin: 48px auto;
+      text-align: center;
+      font-size: 1.6vw;
+      font-weight: 400;
+      /* width: 50vh;
+      height: 5vh; */
+    }
+
+  }
+
+
+
 }
 
 /* Tablet */
@@ -518,8 +558,7 @@ section {}
     background-image: url("assets/capo-fusca-mobile.png");
     background-position: 50% 50%;
 
-    .capo-fusca
-    .texto-sobre-nos{
+    .capo-fusca .texto-sobre-nos {
       display: none;
     }
   }
