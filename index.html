@@ -103,6 +103,7 @@
 
         </section>
 
+        <!-- SOBRE NÓS -->
         <section class="sobre-nos">
 
             <div class="capo-fusca">
@@ -229,36 +230,79 @@
                 <div class="card">
                     <img src="assets/icons/user-check.svg" alt="Localização">
                     <p>Relacionamento próximo e transparente com cada cliente</p>
-                </div>                
+                </div>
 
             </div>
 
         </section>
 
         <!-- ATUAÇÃO E MERCADO -->
-         <section class="atuacao-mercado">
+        <section class="atuacao-mercado">
 
             <h3>Atuação e Mercado</h3>
 
             <div class="texto-atuacao-mercado">
                 <p>
-                    A <b class="bold">J.Freitas</b> atua no modelo B2B (Business to Business), realizando a compra de peças sob demanda de fornecedores brasileiros e exportando para distribuidores internacionais.
+                    A <b class="bold">J.Freitas</b> atua no modelo B2B (Business to Business), realizando a compra de
+                    peças sob demanda de fornecedores brasileiros e exportando para distribuidores internacionais.
                 </p>
 
                 <p>
-                    Nosso portfólio inclui peças para veículos <b class="bold">Volkswagen (Fusca e Kombi), GM, Ford e caminhões</b>, abrangendo componentes de carroceria, motor, latarias e peças mecânicas.
+                    Nosso portfólio inclui peças para veículos <b class="bold">Volkswagen (Fusca e Kombi), GM, Ford e
+                        caminhões</b>, abrangendo componentes de carroceria, motor, latarias e peças mecânicas.
                 </p>
 
                 <p>
-                    Com foco em <b class="bold">flexibilidade e personalização</b>, oferecemos soluções que atendem às preferências e exigências de cada cliente, desde <b class="bold">embalagens neutras</b> até <b class="bold">processos logísticos</b> sob medida.
+                    Com foco em <b class="bold">flexibilidade e personalização</b>, oferecemos soluções que atendem às
+                    preferências e exigências de cada cliente, desde <b class="bold">embalagens neutras</b> até <b
+                        class="bold">processos logísticos</b> sob medida.
                 </p>
             </div>
 
-         </section>
+        </section>
 
+        <!-- CONTATO -->
+        <section class="secao-contato">
+
+            <div class="volante">
+            </div>
+            
+            <div class="form-contato">
+                
+                <h3>Contato</h3>
+
+                <form action="">
+                    <label for="">Nome*</label>
+                    <input type="text" placeholder="Nome" required>
+
+                    <label for="">Email*</label>
+                    <input type="email" placeholder="Email" required>
+                    
+                    <label for="">Mensagem*</label>
+                    <textarea placeholder="Mensagem" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <p class="j-freitas">J. Freitas Autoparts</p>
+                <p>Brasil - São Paulo, SP</p>
+                <p>jfreitas@email.com</p>
+                <p>+55 11 90000-000</p>
+                <p>© <span id="ano-atual"></span> J. Freitas. Todos os direitos reservados.</p>
+            </div>
+        </footer>
     </main>
 
     <script src="js/navbarResponsiva.js"></script>
+    <script>
+        document.getElementById("ano-atual").textContent = new Date().getFullYear();
+    </script>
 
 </body>
 
