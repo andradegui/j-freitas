@@ -452,6 +452,24 @@ button {
       text-align: left;
     }
 
+    .contato-sucesso {
+      display: none;
+      width: 100%;
+      max-width: 380px;
+      margin: -8px 0 18px;
+      padding: 10px 12px;
+      border-radius: 4px;
+      background-color: #162B4D;
+      color: #F4F4F4;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .contato-sucesso.is-visible {
+      display: block;
+    }
+
     label {
       color: #F4F4F4;
       display: block;
@@ -479,7 +497,7 @@ button {
 
     textarea {
       min-height: 120px;
-      resize: vertical;
+      resize: none; 
     }
 
     button {
@@ -748,6 +766,11 @@ button {
     .form-contato h3 {
       text-align: center;
       margin-bottom: 20px;
+    }
+
+    .form-contato .contato-sucesso {
+      margin: -4px 0 16px;
+      font-size: 0.9rem;
     }
 
     .form-contato button {

@@ -262,7 +262,7 @@
         </section>
 
         <!-- CONTATO -->
-        <section class="secao-contato">
+        <section class="secao-contato" id="contato">
 
             <div class="volante">
             </div>
@@ -271,15 +271,22 @@
                 
                 <h3>Contato</h3>
 
-                <form action="">
+                <p class="contato-sucesso" id="contato-sucesso" role="status" aria-live="polite">
+                    Sua mensagem foi recebida com sucesso, em breve nossa equipe irá retornar.
+                </p>
+
+                <form action="https://formsubmit.co/guilima102013@gmail.com" method="post">
                     <label for="">Nome*</label>
-                    <input type="text" placeholder="Nome" required>
+                    <input type="text" name="name" placeholder="Nome" maxlength="100" required>
 
                     <label for="">Email*</label>
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" name="email" maxlength="150" placeholder="Email" required>
                     
                     <label for="">Mensagem*</label>
-                    <textarea placeholder="Mensagem" required></textarea>
+                    <textarea name="message" placeholder="Mensagem" maxlength="300" required></textarea>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" id="form-next" value="">
 
                     <button type="submit">Enviar</button>
                 </form>
@@ -300,9 +307,7 @@
     </main>
 
     <script src="js/navbarResponsiva.js"></script>
-    <script>
-        document.getElementById("ano-atual").textContent = new Date().getFullYear();
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 
