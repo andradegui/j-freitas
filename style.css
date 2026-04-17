@@ -149,12 +149,11 @@ button {
   font-weight: 700;
 }
 
-
 .hero {
   width: 100%;
   display: flex;
   padding: 7vw;
-  background-image: url("assets/hero-2.webp");
+  background-image: url("assets/hero.webp");
   background-position: 50% 50%;
   background-size: cover;
   height: 120vh;
@@ -275,12 +274,12 @@ button {
     background-image: url("assets/capo-fusca.png");
     background-size: cover;
     /* width: 100vw; */
-    height: 100vh;
+    height: 130vh;
   }
 
   .texto-sobre-nos {
     background-color: #162B4D;
-    height: 100vh;
+    height: 130vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -301,6 +300,10 @@ button {
       font-weight: 300;
     }
   }
+
+  .texto-sobre-nos-mobile {
+    display: none;
+  }
 }
 
 .mvv {
@@ -314,7 +317,7 @@ button {
 
   .texto-mvv {
     background-color: #B0B3B8;
-    height: 100vh;
+    height: 130vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -340,15 +343,17 @@ button {
     background-image: url("assets/engine-beetle.png");
     background-size: cover;
     /* width: 48.9vw; */
-    height: 100vh;
+    height: 130vh;
   }
 
 
 }
 
 .diferenciais {
+
+  min-height: 100vh;
+  min-height: 100svh;
   padding: 2vw 6vw 6vw 6vw;
-  height: 100vh;
   background-color: #9E1B1B;
 
   h3 {
@@ -400,7 +405,6 @@ button {
 
   .texto-atuacao-mercado {
 
-    /* display: flex; */
     p {
       width: 80%;
       max-width: 900px;
@@ -408,17 +412,15 @@ button {
       text-align: center;
       font-size: 1.6vw;
       font-weight: 400;
-      /* width: 50vh;
-      height: 5vh; */
     }
 
   }
 
-
-
 }
 
 .secao-contato {
+  /* min-height: 100vh;
+  min-height: 100svh; */
   display: flex;
   flex-flow: row nowrap;
   min-height: 92vh;
@@ -429,7 +431,7 @@ button {
   }
 
   .volante {
-    background-image: url("assets/volante-vw.png");
+    background-image: url("assets/volante-vw.webp");
     background-position: center;
     background-size: cover;
     min-height: 92vh;
@@ -497,7 +499,7 @@ button {
 
     textarea {
       min-height: 120px;
-      resize: none; 
+      resize: none;
     }
 
     button {
@@ -548,56 +550,71 @@ button {
       letter-spacing: 1px;
       margin-bottom: 2px;
     }
-    
+
   }
 }
 
 /* Tablet */
 @media (max-width: 1000px) {
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.4s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+
+  header {
+
+    .container {
+
+      .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav.active {
+        max-height: 600px;
+        padding: 20px 0;
+      }
+
+      .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .desktop-only {
+        display: none;
+      }
+
+      .mobile-only {
+        display: block;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .lang-dropdown {
+        position: static;
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        text-align: center;
+      }
+
+    }
+
   }
 
-  .nav.active {
-    max-height: 600px;
-    padding: 20px 0;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .desktop-only {
-    display: none;
-  }
-
-  .mobile-only {
-    display: block;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .lang-dropdown {
-    position: static;
-    box-shadow: none;
-    border: none;
-    width: 100%;
-    text-align: center;
+  .diferenciais {
+    min-height: auto;
+    padding: 24px 5vw 28px;
   }
 
   .diferenciais .cards {
+    margin-top: 28px;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -621,51 +638,62 @@ button {
 }
 
 @media (max-width: 600px) {
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.4s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  }
 
-  .nav.active {
-    max-height: 600px;
-    padding: 20px 0;
-  }
+  header {
 
-  .nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+    .container {
 
-  .desktop-only {
-    display: none;
-  }
+      .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
 
-  .mobile-only {
-    display: block;
-  }
+      .nav.active {
+        max-height: 600px;
+        padding: 20px 0;
+      }
 
-  .hamburger {
-    display: flex;
-  }
+      .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
 
-  .lang-dropdown {
-    position: static;
-    box-shadow: none;
-    border: none;
-    width: 100%;
-    text-align: center;
+      .desktop-only {
+        display: none;
+      }
+
+      .mobile-only {
+        display: block;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .lang-dropdown {
+        position: static;
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        text-align: center;
+      }
+
+
+
+    }
+
   }
 
   .hero {
-
+    background-image: url("assets/hero-mobile.webp");
     flex-direction: column;
     min-height: 100svh;
     height: auto;
@@ -675,7 +703,7 @@ button {
 
     .meio {
       width: 100%;
-      margin-top: 8px;
+      /* margin-top: clamp(36px, 12vh, 88px); */
 
       h2 {
         font-size: clamp(1.5rem, 7vw, 2.2rem);
@@ -694,6 +722,8 @@ button {
       }
 
       .esquerda {
+
+        /* display: none; */
         p {
           text-align: center;
           font-size: clamp(1rem, 5.5vw, 1.25rem);
@@ -709,6 +739,7 @@ button {
 
     .contato {
       margin-top: auto;
+      padding-bottom: 10px;
       font-size: clamp(1rem, 5vw, 1.2rem);
 
       .botoes {
@@ -733,12 +764,11 @@ button {
   }
 
   .sobre-nos {
-    background-image: url("assets/capo-fusca-mobile.png");
-    background-position: 50% 50%;
 
-    .capo-fusca .texto-sobre-nos {
-      display: none;
-    }
+    .capo-fusca {
+      background-image: url("assets/capo-fusca-mobile.webp");
+    }   
+    
   }
 
   .diferenciais .cards {
