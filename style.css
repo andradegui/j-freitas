@@ -157,7 +157,7 @@ button {
   background-image: url("assets/hero.webp");
   background-position: 50% 50%;
   background-size: cover;
-  height: 125vh;
+  height: 100vh;
   flex-flow: row wrap;
   align-items: center;
   /*posiciona horizontal*/
@@ -200,19 +200,11 @@ button {
     .esquerda {
       /* background-color: red; */
       width: 26%;
+      /* height: 100%; */
 
       p {
         font-size: 1.9vw;
         font-weight: 300;
-      }
-    }
-
-    .direita {
-      /* background-color: purple; */
-      width: 27%;
-
-      p {
-        text-align: end;
       }
     }
 
@@ -222,10 +214,12 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 18vw;
+    margin-top: 6.5vw;
     flex-direction: column;
     align-items: center;
-    font-size: 2vw;
+    text-align: center;
+    font-size: 1.9vw;
+    font-weight: 300;
     /* background-color: yellowgreen; */
 
     .botoes {
@@ -234,13 +228,19 @@ button {
       .email {
         border: none;
         outline: none;
+        text-decoration: none;
         color: #F4F4F4;
         font-size: 1.2vw;
         font-weight: 600;
-        width: 13vw;
+        width: 10vw;
         height: 6vh;
         border-radius: 2px;
         transition: 0.2s ease;
+      }
+
+      .whatsapp a {
+        color: #F4F4F4;
+        text-decoration: none;
       }
 
       .whatsapp {
@@ -272,7 +272,7 @@ button {
   .capo-fusca,
   .texto-sobre-nos {
     width: 50%;
-    height: 120vh;
+    height: 100vh;
   }
 
   .capo-fusca {
@@ -312,87 +312,117 @@ button {
 
 .mvv {
   display: flex;
-  flex-flow: row wrap;
-
-  .texto-mvv,
-  .lanterna-fusca {
-    width: 50%;
-    height: 120vh;
-  }
+  flex-flow: row nowrap;
+  align-items: stretch;
+  background-image: url("assets/santos.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 
   .texto-mvv {
-    background-color: #B0B3B8;
+    color: #F4F4F4;
+    width: 100%;
+    padding: 7vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 4vw;
-
-    h3,
-    p {
-      color: #000000;
-    }
+    justify-content: center;
 
     h3 {
       font-size: 3vw;
       letter-spacing: 3px;
+      text-align: left;
+      margin-bottom: 2rem;
     }
 
-    p {
+    p,
+    ul {
       font-size: 1.4vw;
       font-weight: 300;
+      text-align: left;
+      margin-bottom: 1.5rem;
     }
-  }
 
-  .lanterna-fusca {
-    /* background-image: url("assets/lanterna-fusca.png"); */
-    background-image: url("assets/lanterna-fusca.webp");
-    background-size: cover;
-    /* width: 48.9vw; */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
   }
-
 
 }
 
 .diferenciais {
-
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  background-image: url("assets/containers.webp");
   min-height: 100vh;
-  min-height: 100svh;
-  padding: 2vw 6vw 6vw 6vw;
-  background-color: #9E1B1B;
 
-  h3 {
-    color: #F4F4F4;
-    font-size: 3vw;
-    letter-spacing: 3px;
-    text-align: center;
+  .containers,
+  .texto-diferenciais {
+    width: 50%;
   }
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 56px;
+  .containers {
+    background-size: cover;
+    background-position: center;
+  }
 
-    .card {
-      background-color: #F4F4F4;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
+  .texto-diferenciais {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 6vw 6vw 0 0;
+
+    h3 {
+      color: #F4F4F4;
+      font-size: 3vw;
+      letter-spacing: 3px;
+      text-align: right;
+      width: 100%;
+      margin-bottom: 2.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 0;
+      width: 100%;
+      max-width: 420px;
+
+      .card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 14px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px;
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+
+        p {
+          color: #00335D;
+          font-size: 1.4vw;
+          font-weight: 700;
+          line-height: 1.4;
+          letter-spacing: 0.02em;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+        }
+      }
     }
   }
 }
 
 .atuacao-mercado {
   width: 100%;
-  /* display: flex;
-  flex-direction: column; */
   padding: 7vw;
-  background-image: url("assets/containers.png");
+  background-image: url("assets/navio-containers.webp");
   background-position: 50% 50%;
   background-size: cover;
   min-height: 100vh;
@@ -424,8 +454,8 @@ button {
 }
 
 .secao-contato {
-  /* min-height: 100vh;
-  min-height: 100svh; */
+  /* min-height: 100vh; */
+  /* min-height: 100svh; */
   display: flex;
   flex-flow: row nowrap;
   min-height: 92vh;
@@ -615,73 +645,81 @@ button {
   }
 
   .hero {
-
-    background-image: url("assets/hero-mobile-2.webp");
-    /* background-image: url("assets/hero-mobile.webp"); */
+    background-image: url("assets/hero-mobile.webp");
+    flex-direction: column;
+    min-height: 100svh;
+    height: auto;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 20px 20px 24px;
 
     .meio {
-      /* background-color: green; */
+      width: 100%;
 
       h2 {
         /* font-size: clamp(1.5rem, 7vw, 2.2rem); */
-        font-size: 5.2vw;
+        font-size: 7.2vw;
         line-height: 1.2;
       }
-
     }
 
     .textos-hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
 
-      /* background-color: tomato; */
-      margin-bottom: 45vw;
+      .esquerda {
+        width: 100%;
+        max-width: 100%;
+      }
 
-      .esquerda,
-      .direita {
+      .esquerda {
 
-        width: 36%;
-
+        /* display: none; */
         p {
-
-          font-size: 2.8vw;
+          text-align: center;
+          font-size: clamp(1rem, 5.5vw, 1.25rem);
+          line-height: 1.5;
           font-weight: 400;
         }
 
       }
 
+      .direita {
+        display: none;
+      }
     }
 
     .contato {
-
-      width: 100%;
-      margin-top: 8vw;
+      margin-top: auto;
+      padding-bottom: 18px;
 
       span {
-        font-size: 3.2vw;
+        font-size: 6vw;
+        /* font-size: clamp(1rem, 5vw, 1.2rem); */
+        /* font-weight: 400; */
       }
 
       .botoes {
         display: flex;
-        gap: 12px;
-        justify-content: center;
-        width: min(100%, 420px);
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
       }
 
       .botoes .whatsapp,
       .botoes .email {
-        font-size: 1.2rem;
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+        height: auto;
+        padding: 12px 16px;
+        font-size: 1.1rem;
         font-weight: 600;
-        flex: 1;
-        min-width: 140px;
-        padding: 14px 24px;
       }
-
     }
 
-  }
-
-  .diferenciais {
-    min-height: auto;
-    padding: 6vw 5vw;
   }
 
   .sobre-nos {
@@ -708,41 +746,135 @@ button {
   }
 
   .mvv {
+    background-image: url("assets/santos-mobile.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 
     .texto-mvv {
+      width: 100%;
+      padding: 6vw 4vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
 
       h3 {
         font-size: 6.5vw;
         letter-spacing: 3px;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
       }
 
-      p {
-
-        font-size: 2.6vw;
+      p,
+      ul {
+        font-size: 3.2vw;
         font-weight: 500;
+        text-align: center;
+        margin-bottom: 1.5rem;
       }
 
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
     }
-
-    .lanterna-fusca {
-      background-image: url("assets/lanterna-fusca-mobile.webp");
-    }
-
   }
 
   .diferenciais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("assets/containers-tablet.webp");
+    min-height: 100vh;
+
+    .containers {
+      display: none;
+    }
+
+    .texto-diferenciais {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+
+      h3 {
+        font-size: 6.5vw;
+        text-align: center;
+        width: 100%;
+      }
+
+      .cards {
+        margin-top: 28px;
+        width: 100%;
+        max-width: 420px;
+
+        .card p {
+          font-size: 2.6vw;
+          text-align: center;
+        }
+
+      }
+    }
+  }
+
+  .atuacao-mercado {
 
     h3 {
       font-size: 6.5vw;
     }
 
-    .cards {
-      margin-top: 28px;
-      grid-template-columns: repeat(2, 1fr);
+    .texto-atuacao-mercado p {
+
+      font-size: 3.2vw;
+      font-weight: 500;
     }
-    
   }
 
+  .secao-contato {
+
+    .form-contato {
+
+      h3 {
+        font-size: 6.5vw;
+      }
+
+      form {
+        width: min(100%, 360px);
+        border-radius: 12px;
+        padding: 18px 14px;
+
+        label {
+          font-size: 3.2vw;
+          font-weight: 500;
+        }
+      }
+
+      .contato-sucesso {
+        width: min(100%, 360px);
+        margin: 0 0 14px;
+        font-size: 4vw;
+      }
+
+       button {
+        width: 100%;
+        /* font-size: 1.1rem; */
+        font-size: 3.2vw;
+        font-weight: 600;
+        height: auto;
+        padding: 12px 20px;
+      }
+    }
+  }
 
   .footer .j-freitas {
     font-size: 1.8rem;
@@ -918,38 +1050,81 @@ button {
   }
 
   .mvv {
+    flex-direction: column;
 
     .texto-mvv {
+      width: 100%;
+      padding: 5vw 4vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
 
       h3 {
-        font-size: 6.5vw;
+        font-size: 7.5vw;
         letter-spacing: 3px;
+        margin-bottom: 1.5rem;
       }
 
-      p {
-
-        font-size: 3.2vw;
+      p,
+      ul {
+        font-size: 4.1vw;
         font-weight: 500;
+        text-align: center;
+        margin-bottom: 1.5rem;
       }
 
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
     }
-
-    .lanterna-fusca {
-      background-image: url("assets/lanterna-fusca-mobile.webp");
-    }
-
   }
 
   .diferenciais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("assets/containers-mobile.webp");
+    min-height: 100vh;
 
-    h3 {
-      font-size: 6.5vw;
+    .containers {
+      display: none;
     }
 
-    .cards {
-      grid-template-columns: 1fr;
-    }
+    .texto-diferenciais {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
 
+      h3 {
+        font-size: 6.5vw;
+        text-align: center;
+        width: 100%;
+      }
+
+      .cards {
+        margin-top: 28px;
+        width: 100%;
+        max-width: 420px;
+
+        .card p {
+          font-size: 3.2vw;
+          font-weight: 580;
+          text-align: center;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          /* font-size: 2.6vw; */
+        }
+
+      }
+    }
   }
 
   .atuacao-mercado {
@@ -994,7 +1169,6 @@ button {
       form {
         width: min(100%, 360px);
         /* background-color: rgba(22, 43, 77, 0.68); */
-        /* border: 1px solid rgba(244, 244, 244, 0.22); */
         border-radius: 12px;
         padding: 18px 14px;
 
@@ -1007,7 +1181,7 @@ button {
       .contato-sucesso {
         width: min(100%, 360px);
         margin: 0 0 14px;
-        font-size: 1vw;
+        font-size: 4vw;
       }
 
       input,
