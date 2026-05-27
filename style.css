@@ -816,7 +816,7 @@ button {
       .cards {
         margin-top: 28px;
         width: 100%;
-        max-width: 420px;
+        max-width: 480px;
 
         .card p {
           font-size: 2.6vw;
