@@ -202,7 +202,7 @@ button {
     .esquerda {
       /* background-color: red; */
       width: 26%;
-      margin-bottom: 10vh;
+      margin-top: 12vh;
 
       p {
         font-size: 1.9vw;
@@ -212,21 +212,7 @@ button {
 
   }
 
-  .contato {
-    /* width: auto;
-    display: flex;
-    justify-content: center; */
-    /* position the contact block over the hero image near the beetle bumper */
-    /* position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 8vh;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 1.9vw;
-    font-weight: 450;
-    z-index: 20; */
+  .contato {   
 
     width: 100%;
     display: flex;

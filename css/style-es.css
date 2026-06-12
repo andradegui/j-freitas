@@ -161,7 +161,7 @@ button {
   flex-flow: row wrap;
   align-items: center;
   /*posiciona horizontal*/
-  justify-content: center;
+  justify-content: space-between;
   /* Se torna referência para as divs filhas */
   position: relative;
 
@@ -169,11 +169,6 @@ button {
   p,
   span {
     color: #F4F4F4;
-    margin-bottom: 10vw;    
-  }
-
-  h2{
-    text-align: center;
   }
 
   .meio {
@@ -224,7 +219,7 @@ button {
     align-items: center;
     text-align: center;
     font-size: 1.9vw;
-    font-weight: 300;
+    font-weight: 450;
     /* background-color: yellowgreen; */
 
     .botoes {
@@ -249,11 +244,11 @@ button {
       }
 
       .whatsapp {
-        background-color: #25D366;
+        background-color: #1ead52;
       }
 
       .whatsapp:hover {
-        background-color: rgba(31, 185, 87, 0.77);
+        background-color: rgb(20, 191, 83);
       }
 
       .email {
@@ -654,16 +649,14 @@ button {
     flex-direction: column;
     min-height: 100svh;
     height: auto;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     gap: 14px;
     padding: 20px 20px 24px;
 
     .meio {
       width: 100%;
 
-      h2 {
-        /* font-size: clamp(1.5rem, 7vw, 2.2rem); */
+      h2 {        
         font-size: 7.2vw;
         line-height: 1.2;
       }
@@ -684,7 +677,7 @@ button {
         /* display: none; */
         p {
           text-align: center;
-          font-size: clamp(1rem, 5.5vw, 1.25rem);
+          font-size: 3.5vw;
           line-height: 1.5;
           font-weight: 400;
         }
@@ -702,8 +695,7 @@ button {
 
       span {
         font-size: 6vw;
-        /* font-size: clamp(1rem, 5vw, 1.2rem); */
-        /* font-weight: 400; */
+        font-weight: 450;
       }
 
       .botoes {
@@ -956,12 +948,10 @@ button {
 
   .hero {
     background-image: url("/assets/hero-mobile.webp");
-    /* flex-direction: column; */
+    flex-direction: column;
     min-height: 100svh;
     height: auto;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    justify-content: flex-start;
     gap: 14px;
     padding: 20px 20px 24px;
 
@@ -1008,8 +998,7 @@ button {
 
       span {
         font-size: 6vw;
-        /* font-size: clamp(1rem, 5vw, 1.2rem); */
-        /* font-weight: 400; */
+        /* font-size: clamp(1rem, 5vw, 1.2rem); */        
       }
 
       .botoes {
@@ -1128,7 +1117,6 @@ button {
           width: 100%;
           padding: 0;
           margin: 0;
-          /* font-size: 2.6vw; */
         }
 
       }
