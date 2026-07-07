@@ -20,11 +20,3 @@ if (params.get("contato") === "sucesso" && secaoContato && mensagemSucesso) {
   cleanUrl.searchParams.delete("contato");
   history.replaceState({}, "", `${cleanUrl.pathname}${cleanUrl.hash}`);
 }
-
-const emailButton = document.querySelector(".hero .email");
-if (emailButton && secaoContato) {
-  emailButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    secaoContato.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-}
