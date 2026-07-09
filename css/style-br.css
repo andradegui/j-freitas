@@ -45,13 +45,24 @@ html {
   gap: 35px;
 }
 
-.nav a,
-.desktop-only .lang-dropdown li a {
+.nav a {
   font-size: 1em;
   text-decoration: none;
   color: #2c3e50;
   font-weight: 500;
   transition: 0.3s;
+}
+
+.desktop-only .lang-dropdown li a,
+.lang-dropdown li a {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 10px 12px;
 }
 
 .nav a:hover {
@@ -83,7 +94,7 @@ html {
 }
 
 .lang-dropdown li {
-  padding: 10px;
+  padding: 0;
   transition: 0.3s;
 }
 
@@ -214,7 +225,7 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 6.5vw;
+    margin-bottom: 1.5vw;
     flex-direction: column;
     align-items: center;
     text-align: center;

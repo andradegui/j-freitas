@@ -8,12 +8,30 @@ window.addEventListener('load', () => {
         content: '#smooth-content'
     });
 
-     // ANIMAÇÕES HERO
+    // ANIMAÇÕES HERO
     gsap.from(".hero", {
         opacity: 0,
         duration: 0.5
     });
 
+    // ANIMAÇÕES CIDADE    
+    gsap.from(".card", {
+        opacity: 0,
+        // duration: 1,
+        y: 5,
+        filter: "blur(5px)",
+        // Uma animação é animada atrás da outra (intercalada)
+        stagger: .3,
+        scrollTrigger: {
+            trigger: ".cards",
+            // markers: true,
+            start: "0% 80%",
+            end: "100% 70%",
+            scrub: true
+        }
+    });
+
+    // ANIMAÇÕES SCROLL CONTATO
     const header = document.querySelector('.header');
     const headerHeight = header ? header.offsetHeight : 0;
     const secaoContato = document.getElementById('contato');
@@ -54,5 +72,22 @@ window.addEventListener('load', () => {
         if (initialTarget) {
             scrollToSection(initialTarget);
         }
-    }
+    }    
+
+    // ANIMAÇÕES FOOTER
+    gsap.from("footer", {
+        y: "-30%",
+        // Renderiza a página sem jogar o posicionamento acima
+        immediateRender: false,
+        scrollTrigger: {
+            trigger: "footer",
+            // Para ficar sincronizado com a rolagem da página
+            scrub: true,
+            // markers: true,
+            invalidateOnRefresh: true,
+            end: "100% 100%"
+        }
+    });
+
+
 });
